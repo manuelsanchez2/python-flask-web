@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.nav a {
+  border: 1px solid black;
+  padding: 10px;
+  background: #eeeeee;
+  color: black;
+}
+
+.nav a:hover,
+.nav a.focus {
+  background: #f0f0f0;
+  color: black;
+}
+
+img,
+svg {
+  max-width: 300px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles/main.css')}}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>Profile with username from url</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="{{ url_for('static', filename='assets/logo.svg') }}"
+        alt="logo"
+      />
+
+      <h1>Profile with username from url</h1>
+      <h2>Welcome, {{ name }}</h2>
+
+      {% include "modules/navigation.html" %}
+
+    </div>
+  </body>
+</html>

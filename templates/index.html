@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/main.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="container">
+      {% include "modules/logo.html" %} {% block title %}
+      <h1>Home Page</h1>
+      {% endblock %} {% block content %}
+      <h2>Welcome, {{ name }}, you are only {{ age }} years old!</h2>
+      {% endblock %} {% include "modules/navigation.html" %}
+    </div>
+    <script
+      type="module"
+      src="{{ url_for('static', filename='index.js')}}"
+    ></script>
+  </body>
+</html>
