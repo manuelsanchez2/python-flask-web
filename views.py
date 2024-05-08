@@ -6,24 +6,24 @@ views = Blueprint(__name__, "views")
 def home():
     return render_template('index.html', name="Pacracio", age=30)
 
-# @views.route('/profile/<username>')
-# def profile_username(username):
-#     return render_template('profile-urlname.html', name=username)
+@views.route('/profile/<username>')
+def profile_username(username):
+    return render_template('profile-urlname.html', name=username)
 
-# @views.route('/profile')
-# def profile_queryname():
-#     args = request.args
-#     name = args.get('name')
-#     return render_template('profile-queryname.html', name=name)
+@views.route('/profile')
+def profile_queryname():
+    args = request.args
+    name = args.get('name')
+    return render_template('profile-queryname.html', name=name)
 
-# @views.route('/json')
-# def get_json():
-#     return jsonify({"name": "Pacracio", "age": 30})
+@views.route('/json')
+def get_json():
+    return jsonify({"name": "Pacracio", "age": 30})
 
-# @views.route('/data')
-# def get_data():
-#     data = request.json()
-#     return jsonify(data)
+@views.route('/data')
+def get_data():
+    data = request.json()
+    return jsonify(data)
 
 @views.route('/go-to-home')
 def go_to_home():
