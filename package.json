@@ -1,0 +1,8 @@
+{
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "python3 app.py"
+  }
+}
